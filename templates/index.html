@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  	<meta charset="UTF-8">
+    <link rel="stylesheet" href='/static/main.css' />
+    <title>Cryptanalysis</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<script>
+function myFunction() {
+var text1= $('#text1').val();
+var text2= $('#text2').val();
+var text3= $('#text3').val();
+  $.ajax({
+              url: "/join",
+              type: "POST",
+              data: {text1:text1,
+              text2:text2,text3:text3}
+          }).done(function(response) {
+            var html= "<br><br><br><p> <b> Attempting cryptanalysis... <b><p>";
+            response =response.result;
+                 $.each(response,function(key,val){
+                 console.log(val);
+                    html+="<p>"+key+": "+val+"<p>"
+                });
+                html +="<br>";
+                $(".show-data").append(html);
+            });
+};
+</script>
+<body>
+    <p>
+        <h1>Cryptanalysis</h1>
+        <h2>Select your option:</h2>
+        1. MD5<br><br>
+        2. SHA1<br><br>
+        3. SHA256<br><br>
+        4. SHA512<br><br>
+        5. SHAKE256<br><br>
+        6. Caeser cipher (English)<br><br>
+        7. Caeser cipher (Spanish)<br><br>
+        8. Caeser cipher (German)<br><br>
+        <!-- Leave Key in case of Hashing<br><br> -->
+            Choice: <input type="text" id="text1" name="text1"><br><br>
+            <!-- Key<input type="text" id="text2" name="text2"><br><br> -->
+            Hashed Password/Encrypted value: <input type="text" id="text3" name="text3"><br><br>
+            <button id="clicked" onclick="myFunction()">Submit</button>
+        </p>
+    <div class="show-data" >
+    </div>
+</body>
+</html>
