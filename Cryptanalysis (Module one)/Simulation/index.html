@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		
+		
+		<script src="assets/js/simulation_basic.js"></script> 
+
+		<script src="assets/js/simulation_rsa.js"></script> 
+
+		
+		<script src="assets/js/simulation_xor.js"></script> 
+
+		
+	</head>
+	<body>
+		<h1 id="tomove"></h1>
+
+		
+			<header id="header" class="alt">
+				<div id="toppp" class="logo"><a href="#hero"><img src="images/BU_logo.png" alt="" title="" width = 'auto' height = '50'/></img></a></a></div>
+				
+			</header>
+
+	
+
+	
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>SIMULATION</h1>
+					
+					</header>
+					<a href="#main" class="button big scrolly">LET'S START</a>
+				</div>
+			</section>
+
+		
+			<div id="main">
+<!------------------------------XOR Cipher---------------------------------->
+<section id="basic" class="wrapper style1">
+	<div class="inner">
+		<header class="align-center">
+			<h2>Symmeteric-key cryptography</h2>
+			<h3><u>XOR encryption/decryption</u></h3>
+			
+		</header>
+		<form name="xor_form1">
+		<h3><u>Step 1: Enter your message and your secret key</u> </h3>
+
+		<h3>Message:</h3>  
+					
+		<input type ="text" size=5 name="msg">
+		<br>
+		<h3>Your Secret Key:</h3> 
+		<input  type ="text" size=5 name="secret_key">
+		<br>
+		<input type="button" value="Submit" onClick = xor_generate1()>
+		<br>
+		<br>
+		<h3>Encrypted Message:</h3> 
+		<input readonly="readonly" type ="text" size=5 name="enc">
+
+
+</form>
+
+<form name="xor_form2">
+	<h3><u>Step 2: Generate Decrypted Message</u> </h3>
+
+	<h3>Your secret Key</h3>  
+				
+	<input type ="text" size=5 name="sec">
+	<br>
+
+	<input type="button" value="Submit" onClick = xor_generate2()>
+	<br>
+	<br>
+	<h3>Decrypted Message:</h3> 
+	<input readonly="readonly"  type ="text" size=5 name="dec">
+	<br>
+
+</form>
+
+<br>
+<br>
+<!------------------------------XOR cipher---------------------------------->
+				
+
+				<!------------------------------bASIC ENCRYPTION STARTING---------------------------------->
+				
+				
+				
+							<header class="align-center">
+								<h2>Asymmetric-key cryptography</h2>
+								<h3><u>Basic encryption/decryption</u></h3>
+								<!-- <p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p> -->
+							</header>
+							<h3><u>Step 1: Generate Keys</u></h3>
+							<p>Press the button to generate a pair of randomly chosen keys.</p>
+							<ul>
+								<li>
+									<p>The <b>public key</b> will be posted in a  public key repository where anyone can find it. </p>
+								</li>
+								<li>
+									<p>The <b>private key</b> should be known only to you.</p>
+								</li>
+							</ul>
+						<form name="gen_form">
+						
+							
+							<h3>Public key:</h3> <!--&nbsp;--> 
+					
+							<input readonly="readonly" type ="text" size=5 name="public_key">
+							<br>
+							<h3>Private key:</h3> <!--&nbsp; -->
+							<input readonly="readonly" type ="text" size=5 name="private_key">
+							<br>
+							<input type="button" value="Generate keys" onClick = generate()>
+
+						</form>
+						<br>
+					<h3><u>Step 2: Encrypt the message </u></h3>
+						<p>Now type in a short message and enter one of the keys from above.
+						Then press the button.</p>
+					<form name="myform">
+				<h7>Message:</h7>
+					<input type="text" size=35 value="" name="input">
+					<br>
+					<h7>Encryption key:</h3>
+					<input type="text" size=5 name = encrypt_key>
+					<br>
+				    <input type="button" value="Encode message" onClick=encrypt()><P>
+						<br>
+						<br>
+					<b>The encrypted message:</b>
+					<br><br>
+
+						<input readonly="readonly" type="text" size=75 value="" name="crypted">
+					</form>
+					<h3><u>Step 3: Decrypt the message</u> </h3>
+						<p>Now enter the decryption key ( other than the one you used to encrypt) to see the decrypted message 
+ 						And press the "Decode" button.</p>
+
+					<form name="decrypt_form">
+
+					<h7>Decryption key:</h7>
+						 <input type="text" size=5 name = decrypt_key>
+						 <br>
+						<input type="button" value="Decode message" onClick=decrypt()>
+						<br>
+						<br>
+						<b>The decrypted message:</b>
+						<br>
+						
+							<input readonly="readonly" type="text" size=35 value="" name="decrypted">
+					</form>
+							
+							</div>
+						</div>
+					</section>
+
+			</div>
+			<hr style="height: 1px; width: 100%; border-width: 3px; margin: 5px;">
+<!---------------------GENERAL ENDING ---------------------------->
+
+<!---------------------RSA BEGINING ---------------------------->
+<section id="rsa" class="wrapper style1">
+	<div class="inner">
+		<header class="align-center">
+
+<h3><u>RSA ALGORITHM</u></h3>
+</header>
+<h3>Step 1: Generate Prime Numbers P and Q</h3>
+
+<p >Press the button to generate a pair of randomly chosen Prime Numbers.</p>
+
+<form name="rsa_form1">
+						
+							
+	<h3>P:</h3>
+
+	<input readonly="readonly" type ="text" size=5 name="p_primenumber">
+	<br>
+	<h3>Q:</h3> 
+	<input readonly="readonly" type ="text" size=5 name="q_primenumber">
+	<br>
+	<input type="button" value="Generate prime numbers" onClick = rsa1_generate()>
+
+</form>
+
+
+<h3>Step 2: Generate N, PHI and E</h3>
+
+<p >Press the button to generate the values</p>
+
+<form name="rsa_form2">
+						
+						
+	<div style="float:left;"><h3>N:</h3></div>
+	<div style="float:right;">P x Q</div>
+	<input readonly="readonly" type ="text" size=5 name="n_p_multiply_q">
+	<br>
+	<div style="float:left;"><h3>PHI:</h3></div>
+	<div style="float:right;">(P-1) x (Q-1)</div>
+	<input readonly="readonly" type ="text" size=5 name="phi">
+	<br>
+	<h3>E:</h3> 
+	<input readonly="readonly" type ="text" size=5 name="e_random">
+	<br>
+	<input type="button" value="Generate N, PHI, E" onClick = rsa2_generate()>
+
+</form>
+
+
+<h3>Step 3: Generate Public and Private Key</h3>
+
+<p >Press the button to generate the values</p>
+
+
+<form name="rsa_form3">
+						
+						
+	<div style="float:left;"><h3>D:</h3></div>
+	<div style="float:right;">D x E = 1 mod N</div>
+	<input readonly="readonly" type ="text" size=5 name="d_mod">
+	<br>
+	<div style="float:left;"><h3>Public Key:</h3></div>
+	<div style="float:right;">(N,E)</div>
+	<input readonly="readonly" type ="text" size=5 name="publickey">
+	<br>
+	<div style="float:left;"><h3>Private Key:</h3></div>
+	<div style="float:right;">(N,D)</div>
+	<input readonly="readonly" type ="text" size=5 name="privatekey">
+	<br>
+	<input type="button" value="Generate Keys" onClick = rsa3_generate()>
+
+</form>
+
+
+<h3>Step 4: Encryption/Decryption</h3>
+
+<p >Press the button to generate the values</p>
+
+
+<form name="rsa_form4">
+						
+						
+	<div style="float:left;"><h3>Message:</h3></div>
+	<div style="float:right;">Original Message</div>
+	<input  type ="number" min="1" max="520" size=5 name="message">
+	<br>
+	<div style="float:left;"><h3>Encrypt:</h3></div>
+	<div style="float:right;">Encrypted Message</div>
+	<input readonly="readonly" type ="text" size=5 name="encrypt">
+	<br>
+	<div style="float:left;"><h3>Decrypt:</h3></div>
+	<div style="float:right;">Decrypted Message</div>
+	<input readonly="readonly" type ="text" size=5 name="decrypt">
+	<br>
+	<input type="button" value="Encrypt / Decrypt" onClick = rsa4_generate()>
+
+</form>
+
+</div>
+</section>
+
+
+
+<!-----------------------RSA ENDING------------------------------------------>
+
+
+
+	</body>
+</html>

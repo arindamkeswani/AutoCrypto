@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Computer Networks</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  
+  <link href="img/hackericon1.png" rel="icon">
+  
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+  
+  <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container"> 
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/BU_logo.png" alt="" title="" width = 'auto' height = '45'/></img></a>
+      
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#aabb">AIM</a></li>
+          <li><a href="#servicess">THEORY</a></li>
+          <li><a href="#proce">PROCEDURE</a></li>
+          <li><a href="#call-to-action">SIMULATION</a></li>
+          
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <section id="hero">
+    <div class="hero-container">
+      <h2>Welcome to The World of</h2>
+      <h1>Cryptography</h1>
+      <img id="hero1" source src="./img/video.jpg" >
+      <a href="#about" class="btn-get-started">Get Started</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    
+    <section id="services">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h1 id="aabb"  class="section-title"><u>AIM</u></h1>
+          <br>
+          <p style="font-size: xx-large;" class="section-description"> Demonstrating cryptography techniques in ensuring network security
+          </p>
+          <img class="wow fadeInUp" src="img/about1.png" style="height: 500px; width: auto;">
+        </div>
+        </div>
+        </section>
+
+
+    
+    <section id="services">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h1 id="servicess"  class="section-title"><u>THEORY</u></h1>
+          <br>
+          <p style="font-size: xx-large;" class="section-description">Cryptography, a word with Greek origins, means "secret writing."
+          </p>
+        </div>
+        <div >
+          
+          <h3><u>Cryptography Components</u></h3>
+          <ul>
+            <li><u>Plaintext and Ciphertext</u></li>
+            <p>The original message, before being transformed, is called plaintext.
+              After the message is transformed, it is called ciphertext. An encryption algorithm transforms the
+              plaintext into ciphertext; a decryption algorithm transforms the ciphertext back into plaintext.</p>
+            <li><u>Cipher</u></li>
+            <p>Encryption and decryption algorithms as ciphers. The term cipher is also used to refer to
+              different categories of algorithms in cryptography.
+            </p>
+            <li><u>Key</u></li>
+            <p>A key is a number (or a set of numbers) that the cipher, as an algorithm, operates on.</p>
+          </ul>
+
+          <h3><u>Categories of Cryptography</u></h3>
+
+          <ul>
+            <li><u>Symmetric key (also called secret-key) cryptography algorithms</u></li>
+            <p>In symmetric-key cryptography, the same key is used by both parties. The sender uses this
+              key and an encryption algorithm to encrypt data; the receiver uses the same key and the
+              corresponding decryption algorithm to decrypt the data.
+             In symmetric-key cryptography, the same key is used by the sender (for encryption) and the
+              receiver (for decryption)</p>
+              <p>Examples - </p>
+              <ul>
+                <li>XOR Cipher</li>
+                <li>Data Encryption Standard (DES)</li>
+                <li>Advanced Encryption Standard (AES)</li>
+              </ul>
+              <br>
+              <img class="wow fadeInUp" src="img/symmeteric.PNG">
+              <br>
+              <p></p>
+            <li><u>Asymmetric (also called public-key) cryptography algorithms</u></li>
+            <p>
+              In asymmetric or public-key cryptography, there are two keys:
+              a private key and a public key.
+              The private key is kept by the receiver. The public key is announced to the public.
+            </p>
+            <p>Examples - </p>
+              <ul>
+                <li>RSA</li>
+                <li>Diffie-Hellman</li>
+    
+              </ul>
+            <img class="wow fadeInUp" src="img/asymmeteric.png">
+            <p></p>
+            
+          </ul>
+
+          <h3><u>RSA ALGORITHM</u></h3>
+          <p>
+            <ul>
+              <li style="line-height: 30px;">The most common public key algorithm is RSA, named for its inventors Rivest, Shamir,
+                and Adleman (RSA). It uses two numbers, e and d, as the public and private keys</li>
+                <li style="line-height: 30px;">In RSA, e and n are announced to the public; d and Φ (PHI) are kept secret.</li>
+                <li style="line-height: 30px;">Steps to select the private and public keys:</li>
+                <ol>
+                  <li style="line-height: 30px;">Bob chooses two very large prime numbers p
+                    and q.</li>
+                  <li style="line-height: 30px;">Bob multiplies the above two primes to find n,
+                    the modulus for encryption and decryption.
+                    n = p X q.</li>
+                  <li style="line-height: 30px;">Bob calculates another number
+                    Փ = (p -1) X (q - 1).</li>
+                  <li style="line-height: 30px;">Bob chooses a random integer e. He then
+                    calculates d so that d x e=1 mod Փ .</li>
+                  <li style="line-height: 30px;">Bob announces e and n to the public; he keeps Փ
+                    and d secret.</li>
+                </ol>
+                <li style="line-height: 30px;"><u>Encryption</u></li>
+                <p>Anyone who needs to send a message to Bob can use n and e. For example, if Alice needs to send a message to
+                  Bob, she can change the message, usually a short one, to an integer. This is the plaintext. She then calculates the
+                  ciphertext, using e and n.
+                  C = P^e ( mod n )
+                  Alice sends C, the ciphertext, to Bob.</p>
+                  <li style="line-height: 30px;"><u>Decryption</u></li>
+                  <p>Bob keeps Փ and d private. When he receives the ciphertext, he uses his private key d to decrypt the message:
+                    P = C^d ( mod n )
+                  </p>
+                  <li style="line-height: 30px;"><u>Restriction</u></li>
+                  <p>For RSA to work, the value of P must be less than the value of n. If P is a large number,
+                    the plaintext needs to be divided into blocks to make P less than n
+                  </p>
+                  <img class="wow fadeInUp" src="img/rsa.png">
+            </ul>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h1 id="proce" class="section-title"><u>PROCEDURE</u></h1>
+          <br>
+    
+        </div>
+        <div>
+          
+          <h3><u>Steps:</u></h3>
+          <p></p>
+          <ol>
+            <li style="line-height: 30px;">The aim is to demonstrate and understand how different algorithms of cryptography works.</li>
+            <li style="line-height: 30px;">To perform the experiment follow the below steps.</li>
+            <li style="line-height: 30px;">The first algorithm gives you the basic understanding of how assymeteric cryptography works.</li>
+            <li style="line-height: 30px;">Click on the Generate Keys button to generate your Random keys.</li>
+            <li style="line-height: 30px;">Then type the message you want to encrypt along with the public key in the encryption key box and then press Encode message button.</li>
+            <li style="line-height: 30px;">Then enter your private key in the description key box to see the decrypted message which would be the same as your original message</li>
+            <li style="line-height: 30px;">Also try entering false private key and you will observe that the message is not deecrypted successfully and is different from your original message</li>
+            <li style="line-height: 30px;">The second algorithm is about a very famous algorithm - RSA Algorithm</li>
+            <li style="line-height: 30px;">Click on the generate prime numbers to generate random prime nnumbers.</li>
+            <li style="line-height: 30px;">Then click on Generate N, PHI, E button to generate the respective values</li>
+            <li style="line-height: 30px;">Click on Generate Keys button to generate your keys.</li>
+            <li style="line-height: 30px;">Then in the next step enter the message ( numeric ) you want to encrypt.</li>
+            <li style="line-height: 30px;">You will observe that on pressing the Encrypt/Decrypt the original message ( Message ) is same as the decrypted message.</li>
+            <li style="line-height: 30px;">If all the steps are performed correctly then Experiment is successful</li>
+            <li style="line-height: 30px;">Else Need to do it again</li>
+<p></p>
+
+          </ol>
+
+      </div>
+    </section>
+    <hr id="hori">
+
+    
+    <section id="call-to-action">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">SIMULATION</h3>
+            
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" target="_blank" href="Simulation/index.html">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+    
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        
+      </div>
+      <div class="credits">
+
+        Developed By :  <a href="">Amit Patel | Arindam Keshwani | Tejas Parikh | Aachmann Garg</a>
+      
+    </div> 
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+
+  
+  <script src="js/main.js"></script>
+
+</body>S
+</html>
